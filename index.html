@@ -628,6 +628,205 @@
     100% { left: 200%; }
   }
 
+  /* =====================
+     MOBILE RESPONSIVE
+  ===================== */
+
+  @media (max-width: 768px) {
+
+    /* Hide custom cursor on touch */
+    .cursor, .cursor-ring { display: none; }
+    body { cursor: auto; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea,
+    .form-submit { cursor: auto; }
+    .service-card { cursor: auto; }
+
+    /* NAV */
+    nav {
+      padding: 1.2rem 1.5rem;
+    }
+    nav ul { gap: 1.2rem; }
+    nav ul a { font-size: 0.65rem; letter-spacing: 0.12em; }
+
+    /* HERO */
+    .hero {
+      height: auto;
+      min-height: 100svh;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      padding-bottom: 3rem;
+    }
+
+    .hero-content {
+      padding: 7rem 1.5rem 0;
+      max-width: 100%;
+      position: relative;
+      z-index: 3;
+    }
+
+    .hero-tag {
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title {
+      font-size: clamp(4rem, 18vw, 6rem);
+    }
+
+    .hero-sub {
+      font-size: 0.9rem;
+      max-width: 100%;
+      margin-top: 1.2rem;
+    }
+
+    .hero-cta {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      font-size: 0.8rem;
+    }
+
+    /* CAR on mobile: bottom decorative element */
+    .car-wrapper {
+      position: relative;
+      right: auto;
+      bottom: auto;
+      width: 110%;
+      margin-left: -5%;
+      margin-top: 1.5rem;
+      z-index: 1;
+    }
+
+    /* STATS BAR */
+    .stats-bar {
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      flex: 1 1 50%;
+      max-width: 50%;
+      padding: 1.8rem 1rem;
+      border-bottom: 1px solid rgba(201,168,76,0.1);
+    }
+    .stat-item:nth-child(2) { border-right: none; }
+    .stat-item:nth-child(3), .stat-item:nth-child(4) { border-bottom: none; }
+    .stat-num { font-size: 2.8rem; }
+    .stat-label { font-size: 0.6rem; letter-spacing: 0.15em; }
+
+    /* SERVICES */
+    .services {
+      padding: 5rem 1.5rem;
+    }
+
+    .services-header { margin-bottom: 3rem; }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+      gap: 2px;
+    }
+
+    .service-card {
+      padding: 2.5rem 2rem;
+    }
+
+    /* PROCESS */
+    .process {
+      padding: 5rem 1.5rem;
+    }
+
+    .process-inner {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    /* Hide the car side SVG on mobile (too small to see) */
+    .car-side-wrap {
+      display: none;
+    }
+
+    .process-steps { margin-top: 2rem; }
+
+    .step { margin-bottom: 2rem; }
+
+    /* CONTACT */
+    .contact {
+      padding: 5rem 1.5rem;
+    }
+
+    .contact-inner {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .contact-info { margin-top: 1.5rem; }
+
+    .contact-block {
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .contact-form { margin-top: 0; }
+
+    .form-submit {
+      width: 100%;
+      justify-content: center;
+      padding: 1.2rem 2rem;
+    }
+
+    /* FOOTER */
+    footer {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+
+    .section-title {
+      font-size: clamp(2.5rem, 10vw, 4rem);
+    }
+  }
+
+  @media (max-width: 480px) {
+    nav ul { gap: 0.8rem; }
+    nav ul a { font-size: 0.6rem; }
+
+    .hero-title { font-size: clamp(3.5rem, 20vw, 5rem); }
+
+    .stat-item {
+      flex: 1 1 50%;
+      padding: 1.5rem 0.8rem;
+    }
+    .stat-num { font-size: 2.4rem; }
+    .stat-label { font-size: 0.55rem; }
+
+    .service-card { padding: 2rem 1.5rem; }
+
+    .contact-value { font-size: 1.1rem; }
+  }
+
+  /* TABLET */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    nav { padding: 1.5rem 2.5rem; }
+
+    .hero-content { padding: 0 3rem; }
+
+    .car-wrapper { width: 55%; right: -2%; }
+
+    .services { padding: 6rem 2.5rem; }
+
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .process { padding: 6rem 2.5rem; }
+    .process-inner { gap: 4rem; }
+
+    .contact { padding: 6rem 2.5rem; }
+    .contact-inner { gap: 4rem; }
+
+    footer { padding: 2.5rem 2.5rem; }
+  }
+
   /* PARTICLE DOTS */
   .particles {
     position: absolute;
